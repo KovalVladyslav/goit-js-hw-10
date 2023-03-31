@@ -18,3 +18,40 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.main-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  display: block;
+  width: 30px;
+  height: auto;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.name-country {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
