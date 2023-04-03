@@ -25,29 +25,30 @@ function onSearchCountry(event) {
         Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name.'
         );
-        countryList.classList.add('hidden');
-        countryInfo.classList.add('hidden');
-        countryList.classList.remove('visible');
-        countryInfo.classList.remove('visible');
+        // countryList.classList.add('hidden');
+        // countryInfo.classList.add('hidden');
+        // countryList.classList.remove('visible');
+        // countryInfo.classList.remove('visible');
       }
 
       if (country.length >= 2 && country.length <= 10) {
-        countryList.classList.add('visible');
-        countryList.classList.remove('hidden');
-        countryInfo.classList.add('hidden');
+        // countryList.classList.add('visible');
+        // countryList.classList.remove('hidden');
+        // countryInfo.classList.add('hidden');
         renderListCountry(country);
       }
 
       if (country.length === 1) {
-        countryList.classList.remove('visible');
-        countryList.classList.add('hidden');
-        countryInfo.classList.remove('hidden');
+        // countryList.classList.remove('visible');
+        // countryList.classList.add('hidden');
+        // countryInfo.classList.remove('hidden');
         renderCardCountry(country);
       }
     })
     .catch(() => {
       Notiflix.Notify.failure('Oops, there is no country with that name');
     });
+  countryList.innerHTML = '';
 }
 function renderListCountry(countryValues) {
   const markup = countryValues
@@ -83,7 +84,7 @@ function renderCardCountry(countryValues) {
       </div>
       `;
     })
-    .join('');
+    .join(', ');
 
   countryInfo.innerHTML = markup;
 }
